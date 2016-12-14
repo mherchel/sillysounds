@@ -1,0 +1,55 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  background-image: url(images/millie.jpg);
+  background-size: cover;
+}
+
+.keys-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.key {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 70px;
+  justify-content: center;
+  margin: 0 2px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border: solid 2px black;
+  border-radius: 2px;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .1s;
+}
+
+.key:hover {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.key.js-active {
+  transform: scale(1.3);
+  border-color: yellow;
+}
+
+.key-letter {
+  text-align: center;
+  font-size: 2rem;
+  width: 100%;
+}
+
+.key-label {
+  color: yellow;
+  font-size: 0.5rem;
+}
