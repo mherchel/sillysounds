@@ -45,6 +45,46 @@
       letter:"i",
       label: "Is",
       wavFile: "is"
+    },
+    77: {
+      letter:"m",
+      label: "Millie",
+      wavFile: "millie"
+    },
+    84: {
+      letter:"t",
+      label: "Mommy",
+      wavFile: "mommy"
+    },
+    76: {
+      letter:"l",
+      label: "Laugh",
+      wavFile: "laugh"
+    },
+    72: {
+      letter:"h",
+      label: "Has",
+      wavFile: "has"
+    },
+    88: {
+      letter:"x",
+      label: "Silly Sound 1",
+      wavFile: "silly1"
+    },
+    89: {
+      letter:"y",
+      label: "Yeller",
+      wavFile: "yeller"
+    },
+    67: {
+      letter:"c",
+      label: "Coco",
+      wavFile: "coco"
+    },
+    87: {
+      letter:"w",
+      label: "Woohoo!",
+      wavFile: "woohoo"
     }
   };
 
