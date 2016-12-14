@@ -13,6 +13,10 @@ body {
   background-size: cover;
 }
 
+img {
+  max-width: 100%;
+}
+
 .keys-wrapper {
   display: flex;
   justify-content: center;
@@ -56,4 +60,18 @@ body {
   color: yellow;
   font-size: 0.5rem;
   text-align: center;
+}
+
+.github-link {
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 200px;
+}
+
+@media (max-width: 600px) {
+  .github-link {
+    display: none;
+  }
 }
