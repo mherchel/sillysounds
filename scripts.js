@@ -105,12 +105,12 @@
   for (key in keys) {
     var drumSelector = document.querySelector('.key-' + keys[key]['letter']);
     var drumSoundFile = 'sounds/' + keys[key]['wavFile'] + '.wav';
-    var isAppLoaded;
+    var isAudioLoaded;
 
     // Create audio objects in sounds array
     soundKey = keys[key]['wavFile'];
     sounds[soundKey] = new Audio(drumSoundFile);
-    sounds[soundKey].oncanplaythrough = isAppLoaded; // Preload audio
+    sounds[soundKey].oncanplaythrough = isAudioLoaded; // Preload audio
 
     drumSelector.onclick = (function(drumSound, drumSelector) {
       return function() {
