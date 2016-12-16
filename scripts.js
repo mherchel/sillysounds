@@ -98,16 +98,25 @@
   }
   document.querySelector('.keys-wrapper').innerHTML = drumsHTML;
 
-  // Loop through again to add click event listeners for each drum element
+  // Sounds array to hold audio objects
+  sounds = [];
+
+  // Loop through again to create audio object and add click event listeners for each drum element
   for (key in keys) {
     var drumSelector = document.querySelector('.key-' + keys[key]['letter']);
     var drumSoundFile = 'sounds/' + keys[key]['wavFile'] + '.wav';
+    var isAppLoaded;
 
-    drumSelector.onclick = (function(drumSoundFile, drumSelector) {
+    // Create audio objects in sounds array
+    soundKey = keys[key]['wavFile'];
+    sounds[soundKey] = new Audio(drumSoundFile);
+    sounds[soundKey].oncanplaythrough = isAppLoaded; // Preload audio
+
+    drumSelector.onclick = (function(drumSound, drumSelector) {
       return function() {
-        playSound(drumSoundFile, drumSelector);
+        playSound(drumSound, drumSelector);
       }
-    })(drumSoundFile, drumSelector);
+    })(sounds[soundKey], drumSelector);
   }
 
   // Handle keypress events
@@ -115,9 +124,10 @@
     if (keys.hasOwnProperty(e.keyCode)) {
       var drumLetter = keys[e.keyCode]['letter'];
       var drumLabel = keys[e.keyCode]['label'];
-      var drumSoundFile = 'sounds/' + keys[e.keyCode]['wavFile'] + '.wav';
+      var wavFile = keys[e.keyCode]['wavFile'];
+      var drumSound = sounds[wavFile];
       var drumSelector = document.querySelector('.key-' + drumLetter);
-      playSound(drumSoundFile, drumSelector);
+      playSound(drumSound, drumSelector);
     }
 
     keyLog = (typeof drumLetter !== 'undefined') ? drumLetter + ' ' + e.keyCode + ' ' + drumLabel : e.keyCode;
@@ -125,8 +135,8 @@
   }
 
   // Play the sound and add CSS class to element
-  function playSound(drumSoundFile, drumSelector) {
-    var drumSound = new Audio(drumSoundFile);
+  function playSound(drumSound, drumSelector) {
+    drumSound.currentTime = 0;
     drumSound.play();
     drumSelector.classList.add('js-active');
 
