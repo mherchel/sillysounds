@@ -56,8 +56,8 @@
       label: "Mommy",
       wavFile: "mommy"
     },
-    76: {
-      letter:"l",
+    85: {
+      letter:"u",
       label: "Laugh",
       wavFile: "laugh"
     },
@@ -85,6 +85,31 @@
       letter:"w",
       label: "Woohoo!",
       wavFile: "woohoo"
+    },
+    70: {
+      letter:"f",
+      label: "Fun",
+      wavFile: "fun"
+    },
+    76: {
+      letter:"l",
+      label: "Lolly Rock",
+      wavFile: "lollyrock"
+    },
+    74: {
+      letter:"j",
+      label: "I",
+      wavFile: "I"
+    },
+    86: {
+      letter:"v",
+      label: "Love",
+      wavFile: "love"
+    },
+    82: {
+      letter:"r",
+      label: "Not",
+      wavFile: "not"
     }
   };
 
