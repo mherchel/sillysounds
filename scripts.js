@@ -99,7 +99,7 @@
     74: {
       letter:"j",
       label: "I",
-      wavFile: "I"
+      wavFile: "i"
     },
     86: {
       letter:"v",
@@ -110,6 +110,11 @@
       letter:"r",
       label: "Not",
       wavFile: "not"
+    },
+    71: {
+      letter:"g",
+      label: "Gramma",
+      wavFile: "gramma"
     }
   };
 
