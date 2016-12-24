@@ -9,8 +9,33 @@ body {
   height: 100vh;
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
-  background-image: url(images/millie.jpg);
+  background-image: url(images/millie600.jpg);
   background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 600px) {
+  body {
+    background-image: url(images/millie800.jpg);
+  }
+}
+
+@media (min-width: 800px) {
+  body {
+    background-image: url(images/millie1200.jpg);
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-image: url(images/millie1600.jpg);
+  }
+}
+
+@media (min-width: 1600px) {
+  body {
+    background-image: url(images/millie.jpg);
+  }
 }
 
 img {
