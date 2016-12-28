@@ -115,6 +115,11 @@
       letter:"g",
       label: "Gramma",
       wavFile: "gramma"
+    },
+    75: {
+      letter:"k",
+      label: "Rockstar",
+      wavFile: "rockstar"
     }
   };
 
