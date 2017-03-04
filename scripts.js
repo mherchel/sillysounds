@@ -1,5 +1,4 @@
 (function() {
-
   var keys = {
     65: {
       letter: "a",
@@ -120,6 +119,11 @@
       letter:"k",
       label: "Rockstar",
       wavFile: "rockstar"
+    },
+    69: {
+      letter:"e",
+      label: "PupStar",
+      wavFile: "pupstar"
     }
   };
 
