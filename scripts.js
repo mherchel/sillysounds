@@ -34,9 +34,6 @@
     }
 
     document.querySelector('.keys-wrapper').innerHTML = drumsHTML;
-
-    document.addEventListener('click', clickEvent);
-    document.addEventListener('keydown', keydownEvent); // @todo move to keypress instead of keydown.
   }
 
   function clickEvent(e) {
@@ -56,10 +53,6 @@
       var drumElement = document.querySelector('.key-' + drumLetter);
       playSound(drumSound, drumElement);
     }
-
-    // Log stuff to the console stuff
-    keyLog = (typeof drumLetter !== 'undefined') ? drumLetter + ' ' + e.keyCode + ' ' + drumLabel : e.keyCode;
-    console.info(keyLog);
   }
 
   // Play the sound and add CSS class to element
@@ -72,5 +65,8 @@
       drumElement.classList.remove('js-active');
     }, 100);
   }
+
+  document.addEventListener('click', clickEvent);
+  document.addEventListener('keydown', keydownEvent); // @todo move to keypress instead of keydown.
 
 })();
