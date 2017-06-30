@@ -48,6 +48,7 @@ img {
   flex-wrap: wrap;
   width: 90%;
   max-width: 700px;
+  z-index: 2;
 }
 
 .key {
@@ -91,11 +92,6 @@ img {
   right: 0;
   top: 0;
   display: block;
-  width: 200px;
-}
-
-@media (max-width: 600px) {
-  .github-link {
-    display: none;
-  }
+  width: 25%;
+  max-width: 200px;
 }
