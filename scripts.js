@@ -2,7 +2,6 @@
   var keys = [];
   var sounds = [];
 
-  // Get JSON data
   fetch('sounds.json')
     .then(function(response) {
       return response.json();
@@ -15,22 +14,21 @@
     });
 
   function processData(data) {
+    var drumsHTML = '';
     keys = data;
 
-    // Create Drums HTML and audio objects.
-    var drumsHTML = '';
-
     for (key in keys) {
-      drumsHTML += '<button data-sound="' + keys[key]['wavFile'] + '" class="key key-' + keys[key]['letter'] + '">' +
+      drumsHTML += '<button data-sound="' + keys[key]['wavFile'] + '" class="key">' +
           '<span class="key-letter">' + keys[key]['letter'] + '</span>' +
           '<label class="key-label">' + keys[key]['label'] + '</label>' +
           '</button>';
 
+      // Preload the audio files for quicker playback.
       var drumSoundFile = 'sounds/' + keys[key]['wavFile'] + '.wav';
       var isAudioLoaded;
       var soundKey = keys[key]['wavFile'];
       sounds[soundKey] = new Audio(drumSoundFile);
-      sounds[soundKey].oncanplaythrough = isAudioLoaded; // Preload audio
+      sounds[soundKey].oncanplaythrough = isAudioLoaded;
     }
 
     document.querySelector('.keys-wrapper').innerHTML = drumsHTML;
@@ -46,11 +44,9 @@
 
   function keydownEvent(e) {
     if (keys.hasOwnProperty(e.keyCode)) {
-      var drumLetter = keys[e.keyCode]['letter'];
-      var drumLabel = keys[e.keyCode]['label'];
       var wavFile = keys[e.keyCode]['wavFile'];
       var drumSound = sounds[wavFile];
-      var drumElement = document.querySelector('.key-' + drumLetter);
+      var drumElement = document.querySelector('.key[data-sound="' + wavFile + '"]');
       playSound(drumSound, drumElement);
     }
   }
@@ -68,5 +64,4 @@
 
   document.addEventListener('click', clickEvent);
   document.addEventListener('keydown', keydownEvent); // @todo move to keypress instead of keydown.
-
 })();
