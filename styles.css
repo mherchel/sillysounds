@@ -51,10 +51,7 @@ img {
 }
 
 .key {
-  display: flex;
-  flex-wrap: wrap;
   flex-basis: 70px;
-  justify-content: center;
   margin: 2px;
   padding: 10px;
   background: rgba(0, 0, 0, 0.5);
@@ -79,15 +76,14 @@ img {
 }
 
 .key-letter {
-  text-align: center;
   font-size: 2rem;
   width: 100%;
 }
 
 .key-label {
+  display: block;
   color: yellow;
   font-size: 0.5rem;
-  text-align: center;
 }
 
 .github-link {
