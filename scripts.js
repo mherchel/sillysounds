@@ -18,15 +18,15 @@
     keys = data;
 
     for (key in keys) {
-      drumsHTML += '<button data-sound="' + keys[key]['wavFile'] + '" class="key">' +
+      drumsHTML += '<button data-sound="' + keys[key]['audioFile'] + '" class="key">' +
           '<span class="key-letter">' + keys[key]['letter'] + '</span>' +
           '<label class="key-label">' + keys[key]['label'] + '</label>' +
           '</button>';
 
       // Preload the audio files for quicker playback.
-      var drumSoundFile = 'sounds/' + keys[key]['wavFile'] + '.wav';
+      var drumSoundFile = 'sounds/' + keys[key]['audioFile'] + '.mp3';
       var isAudioLoaded;
-      var soundKey = keys[key]['wavFile'];
+      var soundKey = keys[key]['audioFile'];
       sounds[soundKey] = new Audio(drumSoundFile);
       sounds[soundKey].oncanplaythrough = isAudioLoaded;
     }
@@ -44,9 +44,9 @@
 
   function keydownEvent(e) {
     if (keys.hasOwnProperty(e.keyCode)) {
-      var wavFile = keys[e.keyCode]['wavFile'];
-      var drumSound = sounds[wavFile];
-      var drumElement = document.querySelector('.key[data-sound="' + wavFile + '"]');
+      var audioFile = keys[e.keyCode]['audioFile'];
+      var drumSound = sounds[audioFile];
+      var drumElement = document.querySelector('.key[data-sound="' + audioFile + '"]');
       playSound(drumSound, drumElement);
     }
   }

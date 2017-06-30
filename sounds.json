@@ -2,126 +2,126 @@
   "65": {
     "letter": "a",
     "label": "a",
-    "wavFile": "a"
+    "audioFile": "a"
   },
   "83": {
     "letter": "s",
     "label": "socks",
-    "wavFile": "socks"
+    "audioFile": "socks"
   },
   "68": {
     "letter": "d",
     "label": "Daddy",
-    "wavFile": "daddy"
+    "audioFile": "daddy"
   },
   "78": {
     "letter": "n",
     "label": "And",
-    "wavFile": "and"
+    "audioFile": "and"
   },
   "80": {
     "letter": "p",
     "label": "Pee",
-    "wavFile": "pee"
+    "audioFile": "pee"
   },
   "66": {
     "letter": "b",
     "label": "Stinky",
-    "wavFile": "stinky"
+    "audioFile": "stinky"
   },
   "81": {
     "letter": "q",
     "label": "Butt",
-    "wavFile": "butt"
+    "audioFile": "butt"
   },
   "79": {
     "letter": "o",
     "label": "Poop",
-    "wavFile": "poop"
+    "audioFile": "poop"
   },
   "73": {
     "letter":"i",
     "label": "Is",
-    "wavFile": "is"
+    "audioFile": "is"
   },
   "77": {
     "letter":"m",
     "label": "Millie",
-    "wavFile": "millie"
+    "audioFile": "millie"
   },
   "84": {
     "letter":"t",
     "label": "Mommy",
-    "wavFile": "mommy"
+    "audioFile": "mommy"
   },
   "85": {
     "letter":"u",
     "label": "Laugh",
-    "wavFile": "laugh"
+    "audioFile": "laugh"
   },
   "72": {
     "letter":"h",
     "label": "Has",
-    "wavFile": "has"
+    "audioFile": "has"
   },
   "88": {
     "letter":"x",
     "label": "Silly Sound 1",
-    "wavFile": "silly1"
+    "audioFile": "silly1"
   },
   "89": {
     "letter":"y",
     "label": "Yeller",
-    "wavFile": "yeller"
+    "audioFile": "yeller"
   },
   "67": {
     "letter":"c",
     "label": "Coco",
-    "wavFile": "coco"
+    "audioFile": "coco"
   },
   "87": {
     "letter":"w",
     "label": "Woohoo!",
-    "wavFile": "woohoo"
+    "audioFile": "woohoo"
   },
   "70": {
     "letter":"f",
     "label": "Fun",
-    "wavFile": "fun"
+    "audioFile": "fun"
   },
   "76": {
     "letter":"l",
     "label": "Lolly Rock",
-    "wavFile": "lollyrock"
+    "audioFile": "lollyrock"
   },
   "74": {
     "letter":"j",
     "label": "I",
-    "wavFile": "i"
+    "audioFile": "i"
   },
   "86": {
     "letter":"v",
     "label": "Love",
-    "wavFile": "love"
+    "audioFile": "love"
   },
   "82": {
     "letter":"r",
     "label": "Not",
-    "wavFile": "not"
+    "audioFile": "not"
   },
   "71": {
     "letter":"g",
     "label": "Gramma",
-    "wavFile": "gramma"
+    "audioFile": "gramma"
   },
   "75": {
     "letter":"k",
     "label": "Rockstar",
-    "wavFile": "rockstar"
+    "audioFile": "rockstar"
   },
   "69": {
     "letter":"e",
     "label": "PupStar",
-    "wavFile": "pupstar"
+    "audioFile": "pupstar"
   }
 }
