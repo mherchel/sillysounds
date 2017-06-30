@@ -21,10 +21,10 @@
     var drumsHTML = '';
 
     for (key in keys) {
-      drumsHTML += '<div data-sound="' + keys[key]['wavFile'] + '" class="key key-' + keys[key]['letter'] + '">' +
-          '<div class="key-letter">' + keys[key]['letter'] + '</div>' +
+      drumsHTML += '<button data-sound="' + keys[key]['wavFile'] + '" class="key key-' + keys[key]['letter'] + '">' +
+          '<span class="key-letter">' + keys[key]['letter'] + '</span>' +
           '<label class="key-label">' + keys[key]['label'] + '</label>' +
-          '</div>';
+          '</button>';
 
       var drumSoundFile = 'sounds/' + keys[key]['wavFile'] + '.wav';
       var isAudioLoaded;

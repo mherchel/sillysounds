@@ -1,4 +1,4 @@
-*, *:before, *:after {
+* {
   box-sizing: border-box;
 }
 
@@ -64,10 +64,13 @@ img {
   text-transform: uppercase;
   cursor: pointer;
   transition: all .1s;
+  -webkit-appearance: none;
 }
 
-.key:hover {
+.key:hover,
+.key:focus {
   border-color: rgba(255, 255, 255, 0.7);
+  outline: none;
 }
 
 .key.js-active {
