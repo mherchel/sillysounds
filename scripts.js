@@ -1,5 +1,5 @@
 {
-  let keys = {};
+  const keys = {};
   const sounds = [];
 
   fetch('sounds.json')
@@ -15,7 +15,7 @@
 
   function processData(data) {
     let drumsHTML = '';
-    keys = data;
+    Object.assign(keys, data);
 
     for (key in keys) {
       drumsHTML += `
