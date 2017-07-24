@@ -3,15 +3,9 @@
   const sounds = [];
 
   fetch('sounds.json')
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(data) {
-      processData(data);
-    })
-    .catch(function(err) {
-      console.error(err);
-    });
+    .then(response => response.json())
+    .then(data => processData(data))
+    .catch(err => console.error(err));
 
   function processData(data) {
     let drumsHTML = '';
