@@ -1,132 +1,158 @@
-{
-  "65": {
+[
+  {
+    "keycode" : 65,
     "letter": "a",
     "label": "a",
     "audioFile": "a"
   },
-  "83": {
+  {
+    "keycode" : 83,
     "letter": "s",
     "label": "socks",
     "audioFile": "socks"
   },
-  "68": {
+  {
+    "keycode" : 68,
     "letter": "d",
     "label": "Daddy",
     "audioFile": "daddy"
   },
-  "78": {
+  {
+    "keycode" : 78,
     "letter": "n",
     "label": "And",
     "audioFile": "and"
   },
-  "80": {
+  {
+    "keycode" : 80,
     "letter": "p",
     "label": "Pee",
     "audioFile": "pee"
   },
-  "66": {
+  {
+    "keycode" : 66,
     "letter": "b",
     "label": "Stinky",
     "audioFile": "stinky"
   },
-  "81": {
+  {
+    "keycode" : 81,
     "letter": "q",
     "label": "Butt",
     "audioFile": "butt"
   },
-  "79": {
+  {
+    "keycode" : 79,
     "letter": "o",
     "label": "Poop",
     "audioFile": "poop"
   },
-  "73": {
+  {
+    "keycode" : 73,
     "letter":"i",
     "label": "Is",
     "audioFile": "is"
   },
-  "77": {
+  {
+    "keycode" : 77,
     "letter":"m",
     "label": "Millie",
     "audioFile": "millie"
   },
-  "84": {
+  {
+    "keycode" : 84,
     "letter":"t",
     "label": "Mommy",
     "audioFile": "mommy"
   },
-  "85": {
+  {
+    "keycode" : 85,
     "letter":"u",
     "label": "Laugh",
     "audioFile": "laugh"
   },
-  "72": {
+  {
+    "keycode" : 72,
     "letter":"h",
     "label": "Has",
     "audioFile": "has"
   },
-  "88": {
+  {
+    "keycode" : 88,
     "letter":"x",
     "label": "Silly Sound 1",
     "audioFile": "silly1"
   },
-  "89": {
+  {
+    "keycode" : 89,
     "letter":"y",
     "label": "Yeller",
     "audioFile": "yeller"
   },
-  "67": {
+  {
+    "keycode" : 67,
     "letter":"c",
     "label": "Coco",
     "audioFile": "coco"
   },
-  "87": {
+  {
+    "keycode" : 87,
     "letter":"w",
     "label": "Woohoo!",
     "audioFile": "woohoo"
   },
-  "70": {
+  {
+    "keycode" : 70,
     "letter":"f",
     "label": "Fun",
     "audioFile": "fun"
   },
-  "76": {
+  {
+    "keycode" : 76,
     "letter":"l",
     "label": "Lolly Rock",
     "audioFile": "lollyrock"
   },
-  "74": {
+  {
+    "keycode" : 74,
     "letter":"j",
     "label": "I",
     "audioFile": "i"
   },
-  "86": {
+  {
+    "keycode" : 86,
     "letter":"v",
     "label": "Love",
     "audioFile": "love"
   },
-  "82": {
+  {
+    "keycode" : 82,
     "letter":"r",
     "label": "Not",
     "audioFile": "not"
   },
-  "71": {
+  {
+    "keycode" : 71,
     "letter":"g",
     "label": "Gramma",
     "audioFile": "gramma"
   },
-  "75": {
+  {
+    "keycode" : 75,
     "letter":"k",
     "label": "Rockstar",
     "audioFile": "rockstar"
   },
-  "69": {
+  {
+    "keycode" : 69,
     "letter":"e",
     "label": "PupStar",
     "audioFile": "pupstar"
   },
-   "90": {
+   {
+    "keycode" : 90,
     "letter":"z",
     "label": "Having",
     "audioFile": "having"
   }
-}
+]
