@@ -47,6 +47,7 @@
 
   function keydownEvent(e) {
     const drum = keys.filter(item => (item.keycode === e.keyCode))[0];
+    if (drum === undefined) return;
     const audioFile = drum.audioFile;
     const drumSound = sounds[audioFile];
     const drumSelector = `.key[data-sound="${audioFile}"]`;
