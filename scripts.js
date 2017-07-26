@@ -1,32 +1,40 @@
 {
-  const keys = {};
+  const keys = [];
   const sounds = [];
 
-  fetch('sounds.json')
-    .then(response => response.json())
-    .then(data => processData(data))
-    .catch(err => console.error(err));
-
   function processData(data) {
-    let drumsHTML = '';
-    Object.assign(keys, data);
+    keys.push(...data);
 
-    for (key in keys) {
-      drumsHTML += `
-        <button data-sound="${keys[key]['audioFile']}" class="key">
-          <span class="key-letter">${keys[key]['letter']}</span>
-          <label class="key-label">${keys[key]['label']}</label>
-        </button>`;
+    // Generate the markup.
+    const drumsHTML = keys.map(key =>
+      `<button data-sound="${key.audioFile}" class="key">
+         <span class="key-letter">${key.letter}</span>
+         <label class="key-label">${key.label}</label>
+       </button>`,
+    ).join('');
 
-      // Preload the audio files for quicker playback.
-      const drumSoundFile = 'sounds/' + keys[key]['audioFile'] + '.mp3';
+    // Preload the audio files for quicker playback.
+    keys.forEach((key) => {
+      const drumSoundFile = `sounds/${key.audioFile}.mp3`;
       const isAudioLoaded = '';
-      const soundKey = keys[key]['audioFile'];
+      const soundKey = key.audioFile;
       sounds[soundKey] = new Audio(drumSoundFile);
       sounds[soundKey].oncanplaythrough = isAudioLoaded;
-    }
+    });
 
     document.querySelector('.keys-wrapper').innerHTML = drumsHTML;
+  }
+
+  // Play the sound and add temporary CSS class.
+  function playSound(drumSound, drumElement) {
+    const sound = drumSound;
+    sound.currentTime = 0;
+    sound.play();
+    drumElement.classList.add('js-active');
+
+    setTimeout(() => {
+      drumElement.classList.remove('js-active');
+    }, 100);
   }
 
   function clickEvent(e) {
@@ -38,24 +46,18 @@
   }
 
   function keydownEvent(e) {
-    if (keys.hasOwnProperty(e.keyCode)) {
-      const audioFile = keys[e.keyCode]['audioFile'];
-      const drumSound = sounds[audioFile];
-      const drumElement = document.querySelector('.key[data-sound="' + audioFile + '"]');
-      playSound(drumSound, drumElement);
-    }
+    const drum = keys.filter(item => (item.keycode === e.keyCode))[0];
+    const audioFile = drum.audioFile;
+    const drumSound = sounds[audioFile];
+    const drumSelector = `.key[data-sound="${audioFile}"]`;
+    const drumElement = document.querySelector(drumSelector);
+    playSound(drumSound, drumElement);
   }
 
-  // Play the sound and add CSS class to element
-  function playSound(drumSound, drumElement) {
-    drumSound.currentTime = 0;
-    drumSound.play();
-    drumElement.classList.add('js-active');
-
-    setTimeout(function() {
-      drumElement.classList.remove('js-active');
-    }, 100);
-  }
+  fetch('sounds.json')
+    .then(response => response.json())
+    .then(data => processData(data))
+    .catch(err => console.error(err));
 
   document.addEventListener('click', clickEvent);
   document.addEventListener('keydown', keydownEvent); // @todo move to keypress instead of keydown.
