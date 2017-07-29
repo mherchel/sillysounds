@@ -46,9 +46,9 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
   };
 
   var keydownEvent = function keydownEvent(e) {
-    var drum = keys.filter(function (item) {
+    var drum = keys.find(function (item) {
       return item.keycode === e.keyCode;
-    })[0];
+    });
     if (drum === undefined) return;
     var audioFile = drum.audioFile;
     var drumSound = sounds[audioFile];
