@@ -9,7 +9,7 @@ gulp.task('babel', () =>
     // .pipe(watch('src/**/*.js'))
     .pipe(sourcemaps.init())
     .pipe(babel({
-      "presets": ["es2015-ie"]
+      presets: ['es2015-ie'],
     }))
     .pipe(concat('_build.js'))
     .pipe(sourcemaps.write('.'))
@@ -18,19 +18,4 @@ gulp.task('babel', () =>
 
 gulp.task('watch', () => {
   gulp.watch('src/**/*.js', ['babel']);
-
 });
-
-// gulp.task('stream', function () {
-//     // Endless stream mode
-//     return watch('src/**/*.js', { ignoreInitial: false })
-//         .pipe(gulp.dest('default'));
-// });
-
-// gulp.task('callback', function () {
-//     // Callback mode, useful if any plugin in the pipeline depends on the `end`/`flush` event
-//     return watch('css/**/*.css', function () {
-//         gulp.src('css/**/*.css')
-//             .pipe(gulp.dest('build'));
-//     });
-// });
