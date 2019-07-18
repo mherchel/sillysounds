@@ -1,5 +1,11 @@
 [
   {
+    "keycode": 49,
+    "letter": "1",
+    "label": "1",
+    "audioFile": "moo"
+  },
+  {
     "keycode" : 65,
     "letter": "a",
     "label": "a",
