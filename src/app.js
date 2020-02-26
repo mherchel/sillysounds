@@ -46,6 +46,7 @@
   }
 
   function keydownEvent(e) {
+    console.log(e.keyCode);
     const drum = keys.find(item => (item.keycode === e.keyCode));
     if (drum === undefined) return;
     const audioFile = drum.audioFile;

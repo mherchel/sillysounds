@@ -6,6 +6,12 @@
     "audioFile": "moo"
   },
   {
+    "keycode": 52,
+    "letter": "4",
+    "label": "Dexter",
+    "audioFile": "dexter"
+  },
+  {
     "keycode" : 65,
     "letter": "a",
     "label": "a",
